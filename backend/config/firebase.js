@@ -1,10 +1,16 @@
 import { initializeApp, getApps, cert } from "firebase-admin/app";
 import { getAuth } from "firebase-admin/auth";
 
-const app = getApps().length
-  ? getApps()[0]
-  : initializeApp({
-      credential: cert(JSON.parse(process.env.FIREBASE_SERVICE_ACCOUNT)),
-    });
+const serviceAccount = process.env.FIREBASE_SERVICE_ACCOUNT;
 
-export const adminAuth = getAuth(app);
+let adminAuth = null;
+
+if (serviceAccount) {
+  const app = getApps().length
+    ? getApps()[0]
+    : initializeApp({ credential: cert(JSON.parse(serviceAccount)) });
+  adminAuth = getAuth(app);
+}
+
+export { adminAuth };
+export const isAdminConfigured = Boolean(serviceAccount);

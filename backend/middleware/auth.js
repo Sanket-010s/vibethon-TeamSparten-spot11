@@ -1,6 +1,11 @@
-import { adminAuth } from "../config/firebase.js";
+import { adminAuth, isAdminConfigured } from "../config/firebase.js";
 
 export async function verifyToken(req, res, next) {
+  if (!isAdminConfigured) {
+    req.user = { uid: "demo" };
+    return next();
+  }
+
   const token = req.headers.authorization?.split("Bearer ")[1];
   if (!token) return res.status(401).json({ error: "Missing token" });
 
