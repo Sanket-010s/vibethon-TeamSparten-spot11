@@ -9,6 +9,7 @@ import styles from "./Navbar.module.css";
 
 const links = [
   { href: "/dashboard", label: "Dashboard" },
+  { href: "/leaderboard", label: "Leaderboard" },
   { href: "/modules", label: "Modules" },
   { href: "/playground", label: "Playground" },
   { href: "/games", label: "Games" },
