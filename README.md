@@ -1,7 +1,7 @@
 # AIML Nexus - All-in-One AI/ML Learning Platform [![Next.js](https://img.shields.io/badge/Next.js-16-black?style=flat&logo=next.js&logoColor=white)](https://nextjs.org) [![React](https://img.shields.io/badge/React-19-blue?style=flat&logo=react&logoColor=white)](https://react.dev) [![Firebase](https://img.shields.io/badge/Firebase-FDFEFE?style=flat&logo=firebase&logoColor=FFCA28)](https://firebase.google.com) [![Vercel](https://img.shields.io/badge/Vercel-%23000000.svg?style=flat&logo=vercel&logoColor=white)](https://vercel.com)
 
 **AIML Nexus** is a production-style web platform for interactive AI/ML education. Learn through digestible modules, practice in a Python playground, play concept-reinforcing mini-games, track progress with realtime dashboards and heatmaps, take scored quizzes, and chat with an AI Tutor—all in one modern Next.js app.
-
+ hi 
 ## 📑 Table of Contents
 - [Tech Stack](#tech-stack)
 - [✨ Features](#features)
