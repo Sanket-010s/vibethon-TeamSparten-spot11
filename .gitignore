@@ -1,0 +1,7 @@
+# Safety net — each subfolder has its own .gitignore too
+node_modules/
+.env
+.env.local
+.DS_Store
+Thumbs.db
+*.log
