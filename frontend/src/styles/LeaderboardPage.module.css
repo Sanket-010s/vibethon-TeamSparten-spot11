@@ -1,0 +1,39 @@
+.wrap { padding: 2rem 0; }
+.header { display: flex; justify-content: space-between; margin-bottom: 2rem; align-items: start; gap: 2rem; }
+.kicker { font-size: 0.9rem; text-transform: uppercase; color: var(--brand); letter-spacing: 2px; margin-bottom: 0.5rem; }
+.summaryCard { display: flex; align-items: center; gap: 1rem; padding: 1rem 1.5rem; background: linear-gradient(135deg, rgba(255, 107, 53, 0.1), rgba(255, 140, 90, 0.1)); border-radius: 8px; border: 1px solid var(--brand); }
+.summaryCard strong { display: block; font-size: 1.5rem; background: linear-gradient(135deg, var(--brand), var(--brand-light)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+.summaryCard span { font-size: 0.85rem; color: var(--text-dim); }
+.podiumGrid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-bottom: 2rem; }
+.podiumCard { text-align: center; position: relative; transition: all 0.3s; animation: slideUp 0.5s ease-out; }
+@keyframes slideUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+.podiumCard:hover { transform: translateY(-5px); box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 0 20px var(--brand-glow); }
+.podiumCard.currentUser { border: 2px solid var(--brand); box-shadow: 0 0 30px var(--brand-glow); }
+.rankBadge { position: absolute; top: 1rem; right: 1rem; width: 36px; height: 36px; background: linear-gradient(135deg, var(--brand), var(--brand-light)); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; box-shadow: 0 0 20px var(--brand-glow); animation: pulse 2s ease-in-out infinite; }
+@keyframes pulse { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.1); } }
+.podiumCard h3 { margin: 1rem 0 0.5rem; color: var(--text); }
+.podiumCard p { color: var(--text-dim); margin-bottom: 1rem; }
+.podiumStats { display: flex; justify-content: center; gap: 1rem; font-size: 0.85rem; color: var(--text-dim); }
+.podiumStats span { display: flex; align-items: center; gap: 0.25rem; }
+.listCard { }
+.listHeader { display: flex; justify-content: space-between; margin-bottom: 1.5rem; align-items: center; }
+.listHeader h3 { color: var(--text); }
+.listHeader span { font-size: 0.9rem; color: var(--text-dim); }
+.rowList { display: flex; flex-direction: column; gap: 0.75rem; }
+.row { display: grid; grid-template-columns: 60px 1fr auto auto; gap: 1rem; align-items: center; padding: 1rem; background: var(--bg-secondary); border-radius: 8px; border: 1px solid var(--border); transition: all 0.3s; animation: fadeIn 0.5s ease-out; }
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+.row:hover { border-color: var(--brand); background: rgba(255, 107, 53, 0.05); transform: translateX(5px); }
+.row.currentUserRow { background: linear-gradient(135deg, rgba(255, 107, 53, 0.1), rgba(255, 140, 90, 0.1)); border: 2px solid var(--brand); box-shadow: 0 0 20px var(--brand-glow); }
+.rank { font-size: 1.25rem; font-weight: 700; background: linear-gradient(135deg, var(--brand), var(--brand-light)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; text-align: center; }
+.userMeta strong { display: block; color: var(--text); margin-bottom: 0.25rem; }
+.userMeta span { font-size: 0.85rem; color: var(--text-dim); }
+.score { font-size: 1.25rem; font-weight: 700; color: var(--brand); }
+.badges { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+.badges span { padding: 0.25rem 0.75rem; background: rgba(255, 107, 53, 0.2); border-radius: 999px; font-size: 0.75rem; font-weight: 600; color: var(--brand); border: 1px solid rgba(255, 107, 53, 0.4); }
+
+@media (max-width: 768px) {
+  .podiumGrid { grid-template-columns: 1fr; }
+  .header { flex-direction: column; }
+  .row { grid-template-columns: 50px 1fr; }
+  .score, .badges { grid-column: 2; }
+}

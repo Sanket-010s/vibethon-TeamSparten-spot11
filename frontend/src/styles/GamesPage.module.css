@@ -1,0 +1,22 @@
+.wrap { padding: 2rem 0; }
+.card { margin-bottom: 2rem; transition: all 0.3s; }
+.card:hover { box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 0 20px var(--brand-glow); }
+.dragGrid { display: grid; gap: 1.5rem; margin-top: 1rem; }
+.items { display: flex; gap: 0.75rem; flex-wrap: wrap; }
+.draggable { padding: 0.75rem 1.5rem; background: linear-gradient(135deg, rgba(255, 107, 53, 0.2), rgba(255, 140, 90, 0.1)); border: 1px solid var(--brand); border-radius: 8px; cursor: move; font-weight: 600; color: var(--text); transition: all 0.3s; }
+.draggable:hover { transform: scale(1.05); box-shadow: 0 0 20px var(--brand-glow); }
+.draggable:active { cursor: grabbing; transform: scale(0.95); }
+.bucket { padding: 1.5rem; background: var(--bg-secondary); border: 2px dashed var(--border); border-radius: 8px; min-height: 100px; transition: all 0.3s; }
+.bucket:hover { border-color: var(--brand); background: rgba(255, 107, 53, 0.05); }
+.bucket strong { display: block; margin-bottom: 0.5rem; text-transform: capitalize; color: var(--brand); }
+.optionRow { display: flex; gap: 1.5rem; margin-top: 1rem; flex-wrap: wrap; }
+.optionRow label { display: flex; align-items: center; gap: 0.5rem; padding: 0.75rem 1.25rem; background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 8px; cursor: pointer; transition: all 0.3s; }
+.optionRow label:hover { border-color: var(--brand); background: rgba(255, 107, 53, 0.1); box-shadow: 0 0 15px var(--brand-glow); }
+.optionRow input[type="radio"] { accent-color: var(--brand); }
+.sortRow { display: flex; gap: 0.75rem; margin: 1rem 0; flex-wrap: wrap; }
+.sortButton { padding: 1rem 1.5rem; background: linear-gradient(135deg, rgba(255, 107, 53, 0.2), rgba(255, 140, 90, 0.1)); border: 1px solid var(--brand); border-radius: 8px; font-size: 1.25rem; font-weight: 700; cursor: pointer; color: var(--text); transition: all 0.3s; }
+.sortButton:hover { transform: translateY(-3px); box-shadow: 0 5px 20px var(--brand-glow); }
+.sortButton:active { transform: translateY(0); }
+.submitRow { display: flex; align-items: center; gap: 1rem; margin-top: 2rem; }
+.submitRow span { color: var(--brand); font-weight: 600; animation: fadeIn 0.5s ease-out; }
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }

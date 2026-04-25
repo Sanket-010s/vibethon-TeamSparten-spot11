@@ -1,0 +1,20 @@
+.gridWrap { padding: 2rem 0; }
+.statsGrid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-bottom: 2rem; }
+.statCard { text-align: center; background: linear-gradient(135deg, rgba(255, 107, 53, 0.05), rgba(255, 140, 90, 0.05)); border: 1px solid var(--border); position: relative; overflow: hidden; transition: all 0.3s; cursor: pointer; }
+.statCard::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: linear-gradient(90deg, var(--brand), var(--brand-light)); box-shadow: 0 0 10px var(--brand-glow); }
+.statCard:hover { box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 0 20px var(--brand-glow); }
+.statIcon { color: var(--brand); display: block; margin-bottom: 0.5rem; filter: drop-shadow(0 0 10px var(--brand-glow)); }
+.statCard p { color: var(--text-dim); font-size: 0.9rem; margin-bottom: 0.5rem; }
+.statCard h3 { font-size: 2rem; font-weight: 700; background: linear-gradient(135deg, var(--brand), var(--brand-light)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+.rewardCard, .progressCard, .heatmapCard, .chartCard { margin-bottom: 2rem; }
+.rewardHeader { display: flex; justify-content: space-between; margin-bottom: 1.5rem; }
+.rewardNumbers { display: flex; gap: 1.5rem; }
+.badgeGrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 1rem; }
+.badgeCard { background: rgba(255, 107, 53, 0.1); padding: 1rem; border-radius: 8px; border: 1px solid rgba(255, 107, 53, 0.3); transition: all 0.3s; }
+.badgeCard:hover { box-shadow: 0 0 20px var(--brand-glow); transform: translateY(-2px); }
+.badgeCard strong { color: var(--brand); }
+.badgeEmpty { color: var(--text-dim); font-style: italic; }
+.progressTitleRow { display: flex; justify-content: space-between; margin-bottom: 1rem; }
+.progressBarOuter { height: 12px; background: var(--bg-secondary); border-radius: 6px; overflow: hidden; border: 1px solid var(--border); }
+.progressBarInner { height: 100%; background: linear-gradient(90deg, var(--brand), var(--brand-light)); box-shadow: 0 0 15px var(--brand-glow); }
+.chartArea { height: 300px; margin-top: 1rem; }

@@ -1,0 +1,7 @@
+.wrap { padding: 2rem 0; }
+.card { max-width: 800px; margin: 0 auto; transition: all 0.3s; }
+.card:hover { box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 0 20px var(--brand-glow); }
+.answerBox { margin-top: 2rem; padding: 1.5rem; background: linear-gradient(135deg, rgba(255, 107, 53, 0.05), rgba(0, 217, 255, 0.05)); border-radius: 8px; border: 1px solid var(--border); min-height: 200px; animation: fadeIn 0.5s ease-out; }
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+.answerBox h3 { margin-bottom: 1rem; color: var(--brand); }
+.answerBox p { color: var(--text); line-height: 1.8; }
